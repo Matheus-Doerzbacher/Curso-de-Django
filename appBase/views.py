@@ -9,11 +9,11 @@ def index(request):
     context = {
         "produtos": produtos,
     }
-    return render(request, "index.html", context)
+    return render(request, "home/index.html", context)
 
 
 def contato(request):
-    return render(request, "contato.html")
+    return render(request, "contato/contato.html")
 
 
 def produto(request, pk):
@@ -21,4 +21,4 @@ def produto(request, pk):
     context = {
         "produto": prod,
     }
-    return render(request, "produto.html", context)
+    return render(request, "produto/produto.html", context)
