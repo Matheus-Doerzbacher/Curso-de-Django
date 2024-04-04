@@ -1,46 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
 
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        />
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}" />
 
-        <title>Produto</title>
-      </head>
-      <body>
-        <div class="container">
-          <div class="alert alert-primary" role="alert">
-            Produto
-          </div>
-          <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Produto</th>
-              <th scope="col">Preço</th>
-              <th scope="col">Estoque</th>
-            </tr>
-          </thead>
-          
-          <tbody>
-            <tr>
-              <td><a href="{% url 'index' %}">{{produto.nome}}</a></td>
-              <td>{{produto.preco}}</td>
-              <td>{{produto.estoque}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> <!-- container -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
-      </body>
-    </html>
+    <title>Produto</title>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div class="alert alert-primary" role="alert" style="text-align: center">
+        Produto
+      </div>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Estoque</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><a href="{% url 'index' %}">{{produto.nome}}</a></td>
+            <td>{{produto.preco}}</td>
+            <td>{{produto.estoque}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
   </body>
-  </html>
-  
+</html>
